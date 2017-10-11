@@ -1,0 +1,11 @@
+{
+  "lambda": {
+    "role": "ci-collector-executor",
+    "name": "ci-collector",
+    "region": "us-east-1"
+  },
+  "api": {
+    "id": "lc0gl3oand",
+    "module": "index"
+  }
+}
