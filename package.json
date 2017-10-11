@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "claudia-api-builder": "^2.5.1",
+    "elasticsearch": "^13.3.1"
+  },
+  "name": "ci-collector",
+  "version": "0.1.0",
+  "description": "AWS API Gateway for receiving CI build information and storing to ES",
+  "main": "index.js",
+  "license": "MIT"
+}
