@@ -49,6 +49,7 @@ module.exports = (() => {
   function serialize(event, indexName) {
     const eventDoc = {
       '@timestamp': new Date(),
+      task_type: event.task_type,
       project: event.project,
       repository: event.repository,
       branch: event.branch,
@@ -59,13 +60,12 @@ module.exports = (() => {
 
       duration: event.duration,
       success: event.success,
-      unit_tests: {
-        total: event.unit_tests.total,
-        pct: event.unit_tests.pct
-      },
-
-      e2e_tests: {
-        total: event.e2e_tests.total
+      tests: {
+        total: event.tests.total,
+        pct: event.tests.pct,
+        fail: event.tests.fail,
+        pass: event.tests.pass,
+        pending: event.tests.pending
       }
     };
 
@@ -95,6 +95,7 @@ module.exports = (() => {
           INDEX_BASE_NAME: {
             properties: {
               '@timestamp': { type: 'date' },
+              task_type: { type: 'keyword' },
               project: { type: 'keyword' },
               repo: { type: 'keyword' },
               branch: { type: 'keyword' },
@@ -106,15 +107,13 @@ module.exports = (() => {
               },
               duration: { type: 'integer' },
               success: { type: 'boolean' },
-              unit_tests: {
+              tests: {
                 properties: {
                   total: { type: 'integer' },
-                  pct: { type: 'float' }
-                }
-              },
-              e2e_tests: {
-                properties: {
-                  total: { type: 'integer' }
+                  pct: { type: 'float' },
+                  pass: { type: 'integer' },
+                  fail: { type: 'integer' },
+                  pending: { type: 'integer' }
                 }
               }
             }
