@@ -63,9 +63,9 @@ module.exports = (() => {
       tests: {
         total: event.tests.total,
         lines_pct: event.tests.line_pct,
-        branch_pct: event.tests.branch_pct,
+        branches_pct: event.tests.branch_pct,
         functions_pct: event.tests.functions_pct,
-        statement_pct: event.tests.statement_pct,
+        statements_pct: event.tests.statement_pct,
         fail: event.tests.fail,
         pass: event.tests.pass,
         pending: event.tests.pending
@@ -114,9 +114,9 @@ module.exports = (() => {
                 properties: {
                   total: { type: 'integer' },
                   lines_pct: { type: 'float' },
-                  branch_pct: { type: 'float' },
+                  branches_pct: { type: 'float' },
                   functions_pct: { type: 'float' },
-                  statement_pct: { type: 'float' },
+                  statements_pct: { type: 'float' },
                   pass: { type: 'integer' },
                   fail: { type: 'integer' },
                   pending: { type: 'integer' }
