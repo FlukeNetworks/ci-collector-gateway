@@ -4,7 +4,7 @@ set -e
 
 curl -XPOST https://lc0gl3oand.execute-api.us-east-1.amazonaws.com/latest/build -d '{
   "build": {
-    "task_type": "ui_e2e"
+    "task_type": "e2e"
     "project": "foo",
     "repository": "https://github.com/bar/foo",
     "branch": "master",
@@ -16,8 +16,10 @@ curl -XPOST https://lc0gl3oand.execute-api.us-east-1.amazonaws.com/latest/build 
     "success": true,
     "unit_tests": {
       "total": 1097,
-      "pct": 82.12,
-      "total": 3,
+      "lines_pct": 82.9,
+      "branch_pct": 82.9,
+      "functions_pct": 82.9,
+      "statement_pct": 82.9,
       "pass": 2,
       "fail": 1,
       "pending": 5
