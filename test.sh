@@ -17,9 +17,9 @@ curl -XPOST https://lc0gl3oand.execute-api.us-east-1.amazonaws.com/latest/build 
     "unit_tests": {
       "total": 1097,
       "lines_pct": 82.9,
-      "branch_pct": 82.9,
+      "branches_pct": 82.9,
       "functions_pct": 82.9,
-      "statement_pct": 82.9,
+      "statements_pct": 82.9,
       "pass": 2,
       "fail": 1,
       "pending": 5
