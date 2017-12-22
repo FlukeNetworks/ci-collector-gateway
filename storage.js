@@ -62,10 +62,10 @@ module.exports = (() => {
       success: event.success,
       tests: {
         total: event.tests.total,
-        lines_pct: event.tests.line_pct,
-        branches_pct: event.tests.branch_pct,
+        lines_pct: event.tests.lines_pct,
+        branches_pct: event.tests.branchs_pct,
         functions_pct: event.tests.functions_pct,
-        statements_pct: event.tests.statement_pct,
+        statements_pct: event.tests.statements_pct,
         fail: event.tests.fail,
         pass: event.tests.pass,
         pending: event.tests.pending
